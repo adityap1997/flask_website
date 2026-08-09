@@ -5,10 +5,8 @@ import os
 STATIC_DIR = os.path.join(os.path.dirname(__file__), "static")
 
 app = Flask(
-    __name__,
-    static_folder=STATIC_DIR,
-    static_url_path=""
-)
+    __name__
+    )
 
 
 @app.route("/")
@@ -19,12 +17,12 @@ def home():
 # Catch-all route for files/pages inside static
 @app.route("/<path:path>")
 def catch_all(path):
-    full_path = os.path.join(STATIC_DIR, path)
+    full_path = os.path.join(path)
 
     if os.path.isfile(full_path):
-        return send_from_directory(STATIC_DIR, path)
+        return send_from_directory(path)
 
-    return send_from_directory(STATIC_DIR, "index.html")
+    return send_from_directory("index.html")
 
 
 if __name__ == "__main__":
