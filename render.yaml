@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: rohan-portfolio
+    name: aditya-portfolio
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
