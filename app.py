@@ -13,7 +13,7 @@ app = Flask(
 
 @app.route("/")
 def home():
-    return send_from_directory(STATIC_DIR, "index.html")
+    return send_from_directory("index.html")
 
 
 # Catch-all route for files/pages inside static
