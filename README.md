@@ -1,4 +1,4 @@
-# Rohan Verma — Portfolio Site
+# Aditya Parate — Portfolio Site
 
 A single-page portfolio site with a Python-developer theme, served through a
 tiny Flask app so it can run as a **web service on Render**. The domain
